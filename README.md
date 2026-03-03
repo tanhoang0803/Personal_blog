@@ -4,6 +4,8 @@ A personal blog with a public guest section for readers and a protected admin se
 
 **Live demo:** https://personal-blog-api-rest.onrender.com
 
+**Project spec:** https://roadmap.sh/projects/personal-blog
+
 ---
 
 ## Features
