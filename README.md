@@ -2,7 +2,7 @@
 
 A personal blog with a public guest section for readers and a protected admin section for managing content. Built with Node.js + Express as a REST API backend and plain HTML/CSS/JS on the frontend.
 
-**Live demo:** _coming soon_
+**Live demo:** https://personal-blog-i0mb.onrender.com
 
 ---
 
