@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — My Blog</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="site-logo">My Blog</a>
+      <nav class="site-nav">
+        <a href="../index.html">Home</a>
+        <span id="nav-auth"></span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="dashboard">
+      <div class="dashboard-header">
+        <h1>Dashboard</h1>
+        <a href="new.html" class="btn btn-primary">+ New Article</a>
+      </div>
+
+      <div id="article-table">
+        <table class="article-table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Published</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="article-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> My Blog. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/utils.js"></script>
+  <script src="../js/admin/dashboard.js"></script>
+</body>
+</html>
