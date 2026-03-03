@@ -9,6 +9,9 @@ const app  = express();
 const PORT = process.env.PORT || 3000;
 const PUB  = path.join(__dirname, 'public');
 
+// ── Trust Render/Heroku reverse proxy (required for HTTPS sessions) ───────────
+app.set('trust proxy', 1);
+
 // ── Middleware ────────────────────────────────────────────────────────────────
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -16,7 +19,12 @@ app.use(session({
   secret: process.env.SESSION_SECRET || 'fallback-secret',
   resave: false,
   saveUninitialized: false,
-  cookie: { httpOnly: true, maxAge: 1000 * 60 * 60 * 24 }, // 1 day
+  cookie: {
+    httpOnly: true,
+    maxAge: 1000 * 60 * 60 * 24, // 1 day
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'lax',
+  },
 }));
 
 // ── API routes ────────────────────────────────────────────────────────────────
